@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "1f957924-5116-44b3-b71d-b1112575b151",
+		"name": "API with synced docs",
+		"description": "Buy or rent spacecrafts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "5000791-1f957924-5116-44b3-b71d-b1112575b151"
+	},
+	"item": [
+		{
+			"name": "spacecrafts",
+			"item": [
+				{
+					"name": "{spacecraftId}",
+					"item": [
+						{
+							"name": "Read a spacecraft modified",
+							"id": "7083aee3-b6af-4f8e-a9b0-a2bd916366f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/spacecrafts/:spacecraftId?key=value&spacecraftName=qui",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"spacecrafts",
+										":spacecraftId"
+									],
+									"query": [
+										{
+											"key": "key",
+											"value": "value"
+										},
+										{
+											"description": "(Required) The unique identifier of a spacecraft",
+											"key": "spacecraftName",
+											"value": "qui"
+										}
+									],
+									"variable": [
+										{
+											"key": "spacecraftId",
+											"value": "irure eiusmod in id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "cb6fdbed-ccc6-4fd4-876b-2526e2fc7448",
+									"name": "The spacecraft corresponding to the provided `spacecraftId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId?key=value&spacecraftName=qui",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"spacecrafts",
+												":spacecraftId"
+											],
+											"query": [
+												{
+													"key": "key",
+													"value": "value"
+												},
+												{
+													"description": "(Required) The unique identifier of a spacecraft",
+													"key": "spacecraftName",
+													"value": "qui"
+												}
+											],
+											"variable": [
+												{
+													"key": "spacecraftId",
+													"value": "irure eiusmod in id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"sint tempor aute Duis\",\n  \"name\": \"nisi Excepteur incididunt\",\n  \"type\": \"probe\",\n  \"description\": \"proident velit\"\n}"
+								},
+								{
+									"id": "0264434a-6ed1-4bb8-884a-43122addfee1",
+									"name": "No spacecraft found for the provided `spacecraftId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId?key=value&spacecraftName=qui",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"spacecrafts",
+												":spacecraftId"
+											],
+											"query": [
+												{
+													"key": "key",
+													"value": "value"
+												},
+												{
+													"description": "(Required) The unique identifier of a spacecraft",
+													"key": "spacecraftName",
+													"value": "qui"
+												}
+											],
+											"variable": [
+												{
+													"key": "spacecraftId",
+													"value": "irure eiusmod in id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"fugiat\"\n}"
+								},
+								{
+									"id": "ed4c3309-088b-4711-bdbd-6a41338b6a39",
+									"name": "Unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/spacecrafts/:spacecraftId?key=value&spacecraftName=qui",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"spacecrafts",
+												":spacecraftId"
+											],
+											"query": [
+												{
+													"key": "key",
+													"value": "value"
+												},
+												{
+													"description": "(Required) The unique identifier of a spacecraft",
+													"key": "spacecraftName",
+													"value": "qui"
+												}
+											],
+											"variable": [
+												{
+													"key": "spacecraftId",
+													"value": "irure eiusmod in id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"_postman_previewtype": "html",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"enabled": true
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"fugiat\"\n}"
+								}
+							]
+						}
+					],
+					"id": "4da642cf-1322-4cec-96c6-83ad513e81c9"
+				}
+			],
+			"id": "3f81501a-2953-43c4-af5e-4dac330059cc"
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-Api-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "c0cfdfc3-1a8c-4e64-935e-71bf38d7cc2d",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
