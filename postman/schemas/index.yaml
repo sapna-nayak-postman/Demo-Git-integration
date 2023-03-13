@@ -30,7 +30,19 @@ paths:
         in: query
         required: true
         schema:
-          $ref: '#/components/schemas/SpacecraftId'          
+          $ref: '#/components/schemas/SpacecraftId'
+      - name: test qp
+        description: The key of the spacecraft
+        in: query
+        required: true
+        schema:
+          $ref: '#/components/schemas/SpacecraftId' 
+      - name: test qp2
+        description: The key of the spacecraft
+        in: query
+        required: true
+        schema:
+          $ref: '#/components/schemas/SpacecraftId'                       
     get:
       summary: Read a spacecraft modified
       responses:
@@ -45,13 +57,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'
+                $ref: '#/components/schemas/Error' 
         500:
-          description: Unexpected error
+          description: Server error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Error'          
+                $ref: '#/components/schemas/Error'
+        502:
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'             
 components:
   schemas:
     SpacecraftId:
